@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebabų Namai | Šiauliai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Kebabų <span>Namai</span></a>
+
+                    <button class="hamburger"
+                id="hamburger"
+                aria-label="Atidaryti meniu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+                type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+           <nav class="nav-links" id="nav-links">
+                <a href="#meniu" data-lt="Meniu" data-en="Menu">Meniu</a>
+                <a href="#apie" data-lt="Apie mus" data-en="About Us">Apie mus</a>
+                <a href="#kontaktai" data-lt="Kontaktai" data-en="Contacts">Kontaktai</a>
+            </nav>
+
+            <div class="nav-right">
+                
+                <div class="lang-switcher">
+                    <button class="lang-btn active" id="btn-lt" onclick="setLanguage('lt')">LT</button>
+                    <span>/</span>
+                    <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+                </div>
+               <a href="https://bolt.eu"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="bolt-nav-btn">
+    <i class="fa-solid fa-motorcycle"></i> Bolt
+</a>
+            </div>
+        </div>
+    </header>
+
+<section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="chickenkebab.mp4" type="video/mp4">
+        <source src="chickenkebab.webm" type="video/webm">
+        Jūsų naršyklė nepalaiko video elemento.
+    </video>
+
+    <div class="hero-content">
+        <h1 data-lt="Pačiausi kebabai mieste" data-en="The Best Kebabs in Town">Pačiausi kebabai mieste</h1>
+        <p data-lt="Šviežia mėsytė, traškios daržovės ir firminiai padažai. Užsisakykite arba užsukite!" data-en="Fresh meat, crispy vegetables, and signature sauces. Order online or visit us!">Švieži mėsytė, traškios daržovės ir firminiai padažai. Užsisakykite arba užsukite!</p>
+        <a href="#meniu" class="hero-btn" data-lt="Žiūrėti Meniu" data-en="View Menu">Žiūrėti Meniu</a>
+    </div>
+</section>
+
+    <main class="main-container" id="meniu">
+        <div class="section-title">
+            <h2 data-lt="Mūsų Meniu" data-en="Our Menu">Mūsų Meniu</h2>
+            <span data-lt="Pasirinkite kategoriją" data-en="Choose a category">Pasirinkite kategoriją</span>
+        </div>
+
+        <div class="categories-nav">
+            <button class="cat-btn active" onclick="filterCategory('visi', this)" data-lt="Visi" data-en="All">Visi</button>
+            <button class="cat-btn" onclick="filterCategory('kebabai', this)" data-lt="Kebabai" data-en="Kebabs">Kebabai</button>
+            <button class="cat-btn" onclick="filterCategory('uzkandziai', this)" data-lt="Užkandžiai" data-en="Snacks">Užkandžiai</button>
+            <button class="cat-btn" onclick="filterCategory('gerimai', this)" data-lt="Gėrimai" data-en="Drinks">Gėrimai</button>
+        </div>
+
+        <div class="menu-list">
+
+            <div class="menu-item-card" data-category="kebabai">
+                <div class="item-info">
+                    <h3 class="item-name" data-lt="Klasikinis kebabas lavaše" data-en="Classic Kebab in Wrap">Klasikinis kebabas lavaše</h3>
+                    <p class="item-desc" data-lt="Švelni mėsytė, traškios salotos, pomidorai, agurkai ir pasirinktas padažas." data-en="Tender meat, crispy lettuce, tomatoes, cucumbers and signature sauce.">Švelni mėsytė, traškios salotos, pomidorai, agurkai ir pasirinktas padažas.</p>
+                    <div class="item-footer">
+                        <span class="item-price">7.50 €</span>
+                        <a href="https://bolt.eu" target="_blank" class="order-mini-btn"><i class="fa-solid fa-plus"></i> <span data-lt="Užsisakyti" data-en="Order">Užsisakyti</span></a>
+                    </div>
+                </div>
+                <div class="item-img">
+                    <img src="kebabaslavase.jpg" alt="Kebabas">
+                </div>
+            </div>
+
+            <div class="menu-item-card" data-category="kebabai">
+                <div class="item-info">
+                    <h3 class="item-name" data-lt="Kebabas lėkštėje su bulvytėmis" data-en="Kebab Plate with Fries">Kebabas lėkštėje su bulvytėmis</h3>
+                    <p class="item-desc" data-lt="Mėsytė, gruzdintos bulvytės, šviežios daržovės ir du padažai." data-en="Meat, french fries, fresh vegetables and two sauces.">Mėsytė, gruzdintos bulvytės, šviežios daržovės ir du padažai.</p>
+                    <div class="item-footer">
+                        <span class="item-price">9.20 €</span>
+                        <a href="https://bolt.eu" target="_blank" class="order-mini-btn"><i class="fa-solid fa-plus"></i> <span data-lt="Užsisakyti" data-en="Order">Užsisakyti</span></a>
+                    </div>
+                </div>
+                <div class="item-img">
+                    <img src="kebabaslekstei.jpg" alt="Kebabas lėkštėje">
+                </div>
+            </div>
+
+    
+            <div class="menu-item-card" data-category="uzkandziai">
+                <div class="item-info">
+                    <h3 class="item-name" data-lt="Traškūs sūrio piršteliai" data-en="Crispy Cheese Sticks">Traškūs sūrio piršteliai</h3>
+                    <p class="item-desc" data-lt="Kepti sūrio piršteliai su česnakiniu padažu (6 vnt.)." data-en="Fried cheese sticks with garlic sauce (6 pcs.).">Kepti sūrio piršteliai su česnakiniu padažu (6 vnt.).</p>
+                    <div class="item-footer">
+                        <span class="item-price">4.50 €</span>
+                        <a href="https://bolt.eu" target="_blank" class="order-mini-btn"><i class="fa-solid fa-plus"></i> <span data-lt="Užsisakyti" data-en="Order">Užsisakyti</span></a>
+                    </div>
+                </div>
+                <div class="item-img">
+                    <img src="lazdelessurio.jpg" alt="Užkandis">
+                </div>
+            </div>
+
+        
+            <div class="menu-item-card" data-category="gerimai">
+                <div class="item-info">
+                    <h3 class="item-name" data-lt="Gira / Cola 0.5l" data-en="Kvass / Cola 0.5l">Gira / Cola 0.5l</h3>
+                    <p class="item-desc" data-lt="Gaivieji gėrimai pasirinktinai." data-en="Refreshing drinks of your choice.">Gaivieji gėrimai pasirinktinai.</p>
+                    <div class="item-footer">
+                        <span class="item-price">2.20 €</span>
+                        <a href="https://bolt.eu" target="_blank" class="order-mini-btn"><i class="fa-solid fa-plus"></i> <span data-lt="Užsisakyti" data-en="Order">Užsisakyti</span></a>
+                    </div>
+                </div>
+                <div class="item-img">
+                    <img src="cola.jpg" alt="Gėrimas">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer" id="kontaktai">
+        <div class="footer-container">
+            
+            <div class="footer-col" id="apie">
+                <h4 data-lt="Kebabų Namai" data-en="Kebab House">Kebabų Namai</h4>
+                <p data-lt="Skaniausi kebabai mieste, paruošti su meile ir šviežiausiais natūraliais ingredientais." data-en="The most delicious kebabs in town, prepared with love and fresh ingredients.">Skaniausi kebabai mieste, paruošti su meile ir šviežiausiais natūraliais ingredientais.</p>
+            </div>
+
+            
+            <div class="footer-col">
+                <h4 data-lt="Darbo Laikas" data-en="Working Hours">Darbo Laikas</h4>
+                <p>I–IV: 10:00 – 23:00</p>
+                <p>V–VI: 10:00 – 03:00</p>
+                <p>VII: 11:00 – 22:00</p>
+            </div>
+
+        
+            <div class="footer-col">
+                <h4 data-lt="Kontaktai" data-en="Contacts">Kontaktai</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Vilniaus g. 45, Šiauliai</p>
+                <p><i class="fa-solid fa-envelope"></i> info@kebabunamai.lt</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:info@kebabunamai.lt"><i class="fa-solid fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Kebabų Namai. <span data-lt="Visos teisės saugomos." data-en="All rights reserved.">Visos teisės saugomos.</span></p>
+        </div>
+    </footer>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

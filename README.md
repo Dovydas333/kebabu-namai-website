@@ -19,4 +19,4 @@ Vanilla JavaScript — DOM manipulation for menu filtering, language toggling, a
 
 FontAwesome & Google Fonts — Icons and typography.
 
-git clone https://github.com/Dovydas333/kebabu-namai.git
+git clone https://dovydas333.github.io/kebabu-namai-website/

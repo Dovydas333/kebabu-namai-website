@@ -18,3 +18,5 @@ CSS3 — Custom properties, CSS Grid, Flexbox, media queries, and dynamic blur e
 Vanilla JavaScript — DOM manipulation for menu filtering, language toggling, and mobile navigation.
 
 FontAwesome & Google Fonts — Icons and typography.
+
+git clone https://github.com/Dovydas333/kebabu-namai.git
